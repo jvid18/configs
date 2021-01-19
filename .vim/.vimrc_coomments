@@ -1,0 +1,61 @@
+" Show absolute number line
+set number relativenumber
+" I can use the mouse to interact
+set mouse=a
+" Settear with of numbers
+set numberwidth=1
+" The I copy in the visual mode save in clipboard of my operative sistem
+set clipboard=unnamed
+" Enable syntax in vim
+syntax enable
+" Allow that show me the commads that I am execute
+set showcmd
+" Enable the position
+set ruler
+set cursorline
+" Enable encondig
+set encoding=utf-8
+" When I position myselft in a parenthesis show me where it closes
+set showmatch
+" I define the identation in 2 spaces
+set sw=2
+" Show me the relative number
+" set relativenumber
+" The status baris allways visible 
+set laststatus=2
+
+call plug#begin('~/,vim/plugged')
+
+" Themes
+Plug 'morhetz/gruvbox'
+
+" IDE
+Plug 'easymotion/vim-easymotion'
+Plug 'scrooloose/nerdtree'
+Plug 'christoomey/vim-tmux-navigator'
+
+Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
+
+call plug#end()
+
+"-- AUTOCOMPLETION --
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
+
+colorscheme gruvbox
+let g:gruvbox_contrast_dark = "hard"
+let NERDTreeQuitOnOpen=1
+
+" Letter leader (space)
+let mapleader=" "
+
+" nmap --> means it only in normal mode
+nmap <Leader>s <Plug>(easymotion-s2) 
+
+" Nerdtree
+nmap <Leader>nt :NERDTreeFind<CR>
+
+" Custom shortcuts
+nmap <Leader>w :w<CR>
+nmap <Leader>q :q<CR>
+nmap <Leader>x :x<CR>
