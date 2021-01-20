@@ -16,5 +16,8 @@ alias gc="git commit -m $1"
 alias gac="git add .; git commit -m $1"
 alias ga="git add ."
 
+# Zathura PDF's
+alias zt="nohup zathura $i &"
+
 # Test
 alias blah="ORG=${1:-"origin"}; echo $ORG"
