@@ -35,3 +35,12 @@ if &filetype == "javascript" || &filetype == "python"
 else
   inoremap <silent><expr> <c-space> coc#refresh()
 endif
+
+" Execute files with node
+nnoremap <Leader>n :!node %<CR>
+
+" Execute files with python
+nnoremap <Leader>py :!python3 %<CR>
+
+" Execute files with php
+" nnoremap <Leader>p :!php %<CR>

@@ -18,6 +18,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-surround'
+Plug 'terryma/vim-multiple-cursors'
 
 " IDE
 Plug 'easymotion/vim-easymotion'
