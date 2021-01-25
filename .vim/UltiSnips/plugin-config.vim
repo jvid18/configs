@@ -33,7 +33,7 @@ let NERDTreeAutoDeleteBuffer=1
 let NERDTreeMinimalUI=1
 let NERDTreeDirArrows=1
 let NERDTreeShowLineNumbers=1
-let NERDTreeMapOpenInTab='\t'
+let NERDTreeMapOpenInTab='<TAB>'
 
 let g:javascript_plugin_flow = 1
 
@@ -49,9 +49,9 @@ autocmd VimEnter * if argc() == 0 && !exists('s:std_in') |  NERDTree |  endif
 " - https://github.com/Valloric/YouCompleteMe
 " - https://github.com/nvim-lua/completion-nvim
 "
-"let g:UltiSnipsExpandTrigger="<tab>"
-"let g:UltiSnipsJumpForwardTrigger="<c-b>"
-"et g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " kite
 let g:kite_supported_languages = ['javascript', 'python']
@@ -60,6 +60,28 @@ let g:kite_supported_languages = ['javascript', 'python']
 autocmd FileType python let b:coc_suggest_disable = 1
 autocmd FileType javascript let b:coc_suggest_disable = 1
 autocmd FileType scss setl iskeyword+=@-@
+
+" NERDCommenter
+let g:NERDCreateDefaultMappings=1
+let g:NERDSpaceDelims=1
+let g:NERDCompactSexyComs=1
+let g:NERDDefaultAlign='left'
+let g:NERDAltDelims_java=1
+let g:NERDCustomDelimiters={ 'c': { 'left': '/**', 'right': '*/' } }
+let g:NERDCommentEmptyLines=1
+let g:NERDTrimTrailingWhitespace=1
+let g:NERDToggleCheckAllLines=1
+
+" Import cost
+augroup import_cost_auto_run
+     autocmd!
+     autocmd InsertLeave *.js,*.jsx,*.ts,*.tsx ImportCost
+     autocmd BufEnter *.js,*.jsx,*.ts,*.tsx ImportCost
+     autocmd CursorHold *.js,*.jsx,*.ts,*.tsx ImportCost
+augroup END
+
+" Commenter
+filetype plugin on
 
 " Theme
 colorscheme gruvbox

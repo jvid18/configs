@@ -18,12 +18,14 @@ nnoremap <Leader>x :wq<CR>
 
 " Plugs
 map <Leader>nt :NERDTreeFind<CR>
+map <Leader>p :Files<CR>
+map <Leader>f <Plug>(easymotion-s2)
 
 " Remap keys for gotos
-nmap <silent> gd <Plugs>(coc-definition)
-nmap <silent> gy <Plugs>(coc-type-definition)
-nmap <silent> gi <Plugs>(coc-implementations)
-nmap <silent> gr <Plugs>(coc-references)
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementations)
+nmap <silent> gr <Plug>(coc-references)
 
 " tabs navigation
 nnoremap <Leader>h :tabprevious<cr>
