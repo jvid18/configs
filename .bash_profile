@@ -3,8 +3,15 @@
 # ls
 alias l="ls $1 -Alh"
 
+function neovim() {
+	if [ -z "$1" ]; then
+		nvim ./
+	else
+		nvim $1
+	fi
+}
 # nvim
-alias v="nvim $1"
+alias v=neovim
 
 # Git
 alias gcl="git clone"
