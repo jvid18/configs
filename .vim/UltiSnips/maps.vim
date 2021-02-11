@@ -19,7 +19,7 @@ nnoremap <Leader>x :wq<CR>
 " Plugs
 map <Leader>nt :NERDTreeFind<CR>
 map <Leader>p :Files<CR>
-map <Leader>f <Plug>(easymotion-s2)
+map <Leader>s <Plug>(easymotion-s2)
 
 " Remap keys for gotos
 nmap <silent> gd <Plug>(coc-definition)
