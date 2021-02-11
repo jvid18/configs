@@ -7,7 +7,7 @@ function neovim() {
 	fi
 };
 
-function setRemoteGit() {
+function setRemoteBranch() {
 	if [ -z "$2" ]; then
 		git remote set-url origin $1
 	else
@@ -15,7 +15,7 @@ function setRemoteGit() {
 	fi
 };
 
-funcion addRemoteGit() {
+funcion addRemoteBranch() {
 	if [ -z "$2" ]; then
 		git remote add origin $1
 	else
@@ -29,22 +29,24 @@ funcion addRemoteGit() {
 alias l="ls $1 -Alh"
 
 # rm
-alias rmf="rm -rv $1"
+alias rmf="rm -rf"
 
 # nvim
 alias v=neovim
 
 # Git
+alias gi="git init"
 alias gcl="git clone"
 alias gst="git status"
 alias gl="ORG${1:-"origin"}; git pull $ORG"
 alias gp="git push"
 alias gd="git diff | subl"
-alias gc="git commit -m $1"
+alias gc="git commit -m"
 alias gac="git add .; git commit -m $1"
 alias ga="git add ."
-alias gar=addRemoteGit
-alias gsr=setRemoteGit
+alias gae="git add"
+alias gra=addRemoteBranch
+alias grs=setRemoteBranch
 
 # Zathura PDF's
 alias zt="nohup zathura $i &"
