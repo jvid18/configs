@@ -18,28 +18,30 @@ Plug 'scrooloose/nerdtree'
 Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-surround'
-Plug 'terryma/vim-multiple-cursors'
 
-" IDE
-Plug 'easymotion/vim-easymotion'
+" tmux
+Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'yardnsm/vim-import-cost', { 'do': 'npm install' }
 
 " Autocomplete
-" Plug 'sirver/ultisnips'
+Plug 'sirver/ultisnips'
 Plug 'neoclide/coc.nvim', { 'branch': 'relase' }
 
-" Git
-Plug 'itchyny/vim-gitbranch'
-Plug 'tpope/vim-fugitive'
-Plug 'mhinz/vim-signify'
-
-" I don't know
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+" IDE
+Plug 'editorconfig/editorconfig-vim'
+Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
-
+Plug 'terryma/vim-multiple-cursors'
+Plug 'easymotion/vim-easymotion'
+Plug 'mhinz/vim-signify'
 Plug 'yggdroot/indentline'
+Plug 'scrooloose/nerdcommenter'
+Plug 'yardnsm/vim-import-cost', { 'do': 'npm install' }
 
-Plug 'preservim/nerdcommenter'
+" Git
+" Plug 'itchyny/vim-gitbranch'
+Plug 'tpope/vim-fugitive'
+" Plug 'mhinz/vim-signify'
+Plug 'tpope/vim-repeat'
 
 call plug#end()
