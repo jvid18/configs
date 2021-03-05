@@ -33,6 +33,9 @@ alias gd="git diff | subl"
 alias ga="git add ."
 alias gae="git add"
 alias gc="git commit -m"
+alias gnb="git branch"
+alias gcb="git checkout"
+alias gcnb="git checkout"
 alias gra=addRemoteBranch
 alias grs=setRemoteBranch
 
@@ -57,4 +60,11 @@ alias zt=openZathura
 
 function openZathura() {
 	nohup zathura $1 &
+}
+
+## Brwoser-sync (require install with npm)
+alias serve=startServer
+
+function startServer() {
+	browser-sync -s -f .
 }
