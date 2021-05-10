@@ -9,6 +9,8 @@ set cursorline
 set encoding=UTF-8
 set showmatch
 set sw=2
+set clipboard+=unnamedplus
+
 source ~/configs/.vim/plugins.vim
 source ~/configs/.vim/maps.vim
 source ~/configs/.vim/plugin-config.vim

@@ -61,6 +61,8 @@ command! -bang -nargs=* Ag
 command! -bang -nargs=? -complete=dir Files
   \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
 
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
 " if hidden is not set, TextEdit might fail.
 set hidden
 
@@ -101,12 +103,12 @@ let g:NERDTrimTrailingWhitespace=1
 let g:NERDToggleCheckAllLines=1
 
 " Import cost
-augroup import_cost_auto_run
-     autocmd!
-     autocmd InsertLeave *.js,*.jsx,*.ts,*.tsx ImportCost
-     autocmd BufEnter *.js,*.jsx,*.ts,*.tsx ImportCost
-     autocmd CursorHold *.js,*.jsx,*.ts,*.tsx ImportCost
-augroup END
+" augroup import_cost_auto_run
+"      autocmd!
+"      autocmd InsertLeave *.js,*.jsx,*.ts,*.tsx ImportCost
+"      autocmd BufEnter *.js,*.jsx,*.ts,*.tsx ImportCost
+"      autocmd CursorHold *.js,*.jsx,*.ts,*.tsx ImportCost
+" augroup END
 
 " Commenter
 filetype plugin on

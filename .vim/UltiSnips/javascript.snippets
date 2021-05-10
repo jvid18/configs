@@ -12,6 +12,18 @@ const $1 = ${2:($3)} => ${4:{
 }};
 endsnippet
 
+snippet if "if () {}" b
+if ($1) ${2: {
+  $3
+}}
+endsnippet
+
+snippet func "function () {}" b
+function $1($2) {
+  $3
+}
+endsnippet
+
 snippet afn "() => {}" i
 ${2:($3)} => ${4:{
   $5
