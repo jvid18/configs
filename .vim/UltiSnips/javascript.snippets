@@ -2,6 +2,14 @@ snippet clg "console.log()" b
 console.log(${1:'$2', $3});
 endsnippet
 
+snippet cle "console.error()" b
+console.error(${1:'$2', $3});
+endsnippet
+
+snippet clw "console.warn()" b
+console.warn(${1:'$2', $3});
+endsnippet
+
 snippet imp "import from ''" b
 import ${2:{ $3 }} from '$1';
 endsnippet
@@ -12,13 +20,21 @@ const $1 = ${2:($3)} => ${4:{
 }};
 endsnippet
 
+snippet try "try {} catch() {}" b
+try {
+  $3
+} catch${1:($2)} {
+  $4
+}
+endsnippet
+
 snippet if "if () {}" b
 if ($1) ${2: {
   $3
 }}
 endsnippet
 
-snippet func "function () {}" b
+snippet fc "function () {}" b
 function $1($2) {
   $3
 }
@@ -66,6 +82,10 @@ endsnippet
 
 snippet des "const {} =" b
 const { $1 } = $2
+endsnippet
+
+snippet desa "const [] =" b
+const [ $1 ] = $2
 endsnippet
 
 snippet rfc "React function component" b
